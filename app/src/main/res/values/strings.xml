@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ComponentZhqApplication</string>
+
+    <string name="home_name">首页</string>
+    <string name="message_name">消息</string>
+    <string name="mine_name">我</string>
 </resources>
