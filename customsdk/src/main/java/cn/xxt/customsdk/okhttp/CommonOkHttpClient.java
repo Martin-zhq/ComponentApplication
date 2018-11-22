@@ -6,6 +6,7 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 
 import cn.xxt.customsdk.okhttp.https.HttpsUtil;
+import cn.xxt.customsdk.okhttp.listener.DisposeDataHandler;
 import cn.xxt.customsdk.okhttp.response.CommonJsonCallback;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -43,7 +44,7 @@ public class CommonOkHttpClient {
             }
         });
         //支持所有类型的https证书
-        okHttpBuilder.sslSocketFactory(HttpsUtil.getSSLSocketFactory());
+        okHttpBuilder.sslSocketFactory(HttpsUtil.initSSLSocketFactory(), HttpsUtil.initTrustManager());
         //生成client对象
         okHttpClient = okHttpBuilder.build();
     }
@@ -63,6 +64,18 @@ public class CommonOkHttpClient {
         return call;
     }
 
+
+    public static Call get(Request request, DisposeDataHandler handler) {
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new CommonJsonCallback(handler));
+        return call;
+    }
+
+    public static Call post(Request request, DisposeDataHandler handler) {
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new CommonJsonCallback(handler));
+        return call;
+    }
 
 
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/default_user_avatar" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/civ_logo"
+        android:layout_toRightOf="@+id/civ_logo"
+        android:text="微微一笑很清纯"
+        android:textSize="18sp"
+        android:textColor="@color/color_333333"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tv_title"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/trade_share" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/civ_logo"
+        android:layout_toRightOf="@id/civ_logo"
+        android:text="视频"
+        android:textColor="@color/result_view"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_video_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/civ_logo" />
+
+    <TextView
+        android:id="@+id/tv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_video_ad"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="杨洋郑爽聊破次元盛，甜蜜演绎《微微一笑很清纯》"
+        android:textSize="16sp"
+        android:textColor="@color/color_333333" />
+</RelativeLayout>

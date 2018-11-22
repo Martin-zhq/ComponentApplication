@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/default_user_avatar" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/civ_logo"
+        android:layout_toRightOf="@+id/civ_logo"
+        android:text="微微一笑很清纯"
+        android:textSize="18sp"
+        android:textColor="@color/color_333333"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/civ_logo"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="100￥"
+        android:textSize="18sp"
+        android:textColor="@color/color_ffff4444" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/civ_logo"
+        android:layout_toRightOf="@+id/civ_logo"
+        android:text="多图"
+        android:textSize="16sp"
+        android:textColor="@color/result_view" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/civ_logo"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="5dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_multi_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizontal_scroll_view"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:lines="2"
+        android:ellipsize="end"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="杨洋郑爽聊破次元盛，甜蜜演绎《微微一笑很清纯》"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_footer"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_d0d0d0" />
+
+    <TextView
+        android:id="@+id/tv_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="15dp"
+        android:text="来自郑州"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/tv_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="15dp"
+        android:text="赞"
+        android:textSize="16sp"
+        android:textColor="@color/color_bfbfbf" />
+</RelativeLayout>
